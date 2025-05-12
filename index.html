@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals - Olaniyi Bello</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals course project by Olaniyi Bello, featuring responsive design, modern HTML/CSS, and interactive JavaScript elements.">
+    <meta name="author" content="Olaniyi Bello">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=PT+Serif:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 <body>
-    <h1>WDD 131 - Olaniyi Bello</h1>
+    <header>
+        <h1>WDD 131 – Dynamic Web Fundamentals - <span class="name">Olaniyi Bello</span></h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/olaniyi-bello-57067a104/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng&id=p7#p7" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="card">
+            <div class="heading">
+                <h2>About Me</h2>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p>I am Olaniyi Bello, I am pursuing this course as part of the requirements to achieve my degree in software
+                        development. I am a dedicated HR professional with a proven track record in people management and
+                        organizational development.</p>
+                </div>
+                <figure class="card-figure">
+                    <img src="images/olaniyi-bello.jpg" alt="Olaniyi Bello">
+                </figure>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <div class="heading">
+                <h3>Lagos, Nigeria</h3>
+                <hr class="section-divider">
+            </div>
+        
+            <div class="card-body-2">
+                <!-- Column 1: the image + caption -->
+                <figure class="card-figure-2">
+                    <img src="images/nigerian-flag.png" alt="Nigerian Flag" width="200" height="133">
+                    <figcaption>Official flag of Nigeria.</figcaption>
+                </figure>
+        
+                <!-- Column 2: the text -->
+                <div class="card-text">
+                    <p>
+                        Lagos is a city of two realities merged into one. It is a place where busy yellow buses and motorcycles move
+                        alongside fancy cars, where street vendors sell snacks under tall billboards, and where old traditions live
+                        beside modern technology. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <aside class="aside-content">
+        <section class="card">
+        <h2> Web Dev Resources</h2>
+        <ul class="aside-navigation">
+            <li><a href="#">Dev.to Community</a></li>
+            <li><a href="#">Smashing Magazine</a></li>
+            <li><a href="#">CSS Tricks</a></li>
+            <li><a href="#">W3 Schools</a></li>
+            <li><a href="#">Udemy</a></li>
+            <li><a href="#">Image Placeholder</a></li>
+        </ul>
+        </section>
+    </aside>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Olaniyi Bello - Lagos, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+
 </body>
+
 </html>
