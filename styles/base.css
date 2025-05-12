@@ -88,7 +88,7 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: overline;
+    text-decoration: underline;
 }
 
 .active {
@@ -199,6 +199,10 @@ nav a:hover {
     color: black;
     padding: 8rem 2rem;
     text-decoration: none;
+}
+
+.aside-navigation li {
+    margin-bottom: 0.5rem;
 }
 
 footer {
