@@ -95,17 +95,6 @@ nav a:hover {
     color: yellow;
 }
 
-/* larger/wider views **************************/
-@media (min-width: 640px) {
-    nav ul {
-        display: flex;
-    }
-
-    nav ul li {
-        flex: 1 0 auto;
-    }
-}
-
 .card {
     background: white;
     margin-bottom: 1rem;
@@ -222,4 +211,15 @@ p {
 #lastModified {
     color: yellow;
     font-weight: bold;
+}
+
+/* larger/wider views **************************/
+@media (min-width: 640px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 0 auto;
+    }
 }
