@@ -1,0 +1,36 @@
+ @media only screen and (min-width: 40em) {
+    header {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+     h1 {
+         font-size: 2rem;
+     }
+
+     .logo {
+        text-align: left;
+        margin-left: 1rem;
+     }
+
+     .navigation {
+         display: flex;
+     }
+
+     .navigation li {
+         display: block;
+         flex: 1 1 100%;
+     }
+
+     .navigation a {
+         text-align: center;
+     }
+
+     #menu {
+         display: none;
+     }
+
+    .figure-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+ }
