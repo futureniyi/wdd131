@@ -10,7 +10,7 @@
     --heading-color: #333333;
     --border-color: #dddddd;
     --background-color: #ddd;
-    --main-max-width: 800px;
+    --main-max-width: 960px;
     --highlight-color: yellow;
     --primary-font: 'Lato', sans-serif;
     --secondary-font: 'PT Serif', serif;
@@ -18,8 +18,8 @@
 
  body {
      font-family: var(--primary-font);
-     max-width: var(--main-max-width);
      margin: 0 auto;
+     line-height: 1.6;
  }
 
 header {
@@ -28,7 +28,7 @@ header {
     background-color: var(--primary-color);
 }
 
-header h1 {
+.logo {
     color: #fff;
     font-size: 2rem;
     margin: 0 auto;
@@ -88,6 +88,13 @@ nav {
     content: "X";
 }
 
+h2 {
+    padding: 1rem;
+    font-size: 22px;
+    text-align: center;
+    color: var(--text-color);
+}
+
 main {
     max-width: var(--main-max-width);
     margin: 0 auto;
@@ -114,9 +121,10 @@ figcaption {
 }
 
 footer {
+    /* display: block; */
     background: var(--primary-color);
     color: #e5e5e5;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -125,9 +133,3 @@ footer {
     font-weight: bold;
 }
 
-h1 {
-    padding: 1rem;
-    font-size: 22px;
-    text-align: center;
-    color: var(--text-color);
-}
