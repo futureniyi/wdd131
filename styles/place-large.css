@@ -1,0 +1,125 @@
+@media only screen and (min-width: 40em) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --primary-color: #124322;
+        --secondary-color: #FFFFFF;
+        --text-color: black;
+        --border-color: #dddddd;
+        --main-max-width: 960px;
+        --primary-font: 'Lato', sans-serif;
+        --secondary-font: 'PT Serif', serif;
+    }
+
+    .hero {
+        position: relative;
+        padding-top: 0.5rem;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #weather img {
+        display: none;
+        /* Hide SVG/icon on large view, emoji will show */
+    }
+
+    #weather h2::after {
+        content: " ⛅";
+        display: inline;
+        font-size: 1.5em;
+        vertical-align: middle;
+        margin-left: 0.4em;
+    }
+
+    /* Shared card styles for data and weather */
+    #data,
+    #weather {
+        position: absolute;
+        color: #000;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 1.2em;
+        font-size: 0.75rem;
+        text-align: left;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    #data {
+        width: 250px;
+        top: 5%;
+        left: 2%;
+    }
+
+    #weather {
+        width: 220px;
+        bottom: 5%;
+        right: 2%;
+    }
+
+    /* Tab-style headings */
+    #data h2,
+    #weather h2 {
+        background: var(--primary-color);
+        color: #fff;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.5em 1.7em 0.5em 1em;
+        margin: 0 1em 1em -1.3em;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+
+    #weather h2 {
+        margin: 0 0 1em -1.3em;
+    }
+
+    /* Data/weather table full width inside the card */
+    .data-table,
+    .weather-table {
+        width: 100%;
+        table-layout: fixed;
+        margin: 1em auto;
+        border-collapse: collapse;
+        font-size: 1em;
+        background: none;
+        max-width: 100%;
+    }
+
+    .data-table th,
+    .data-table td,
+    .weather-table th,
+    .weather-table td {
+        padding: 0.4em 0.7em 0.4em 0;
+        text-align: center;
+        border: none;
+        font-weight: normal;
+        vertical-align: top;
+        word-break: break-word;
+    }
+
+    .data-table th,
+    .weather-table th {
+        font-weight: bold;
+        width: 45%;
+        /* Makes labels and values align well */
+        min-width: 110px;
+    }
+
+    .data-table td,
+    .weather-table td {
+        width: 55%;
+    }
+}

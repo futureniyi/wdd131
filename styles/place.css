@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #124322;
+    --secondary-color: #FFFFFF;
+    --text-color: black;
+    --primary-font: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+}
+
+.hero {
+    padding-top: 0.5rem;
+}
+
+header {
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container img {
+    height: 128px;
+    width: 128px;
+}
+
+footer {
+    background: var(--primary-color);
+    color: #e5e5e5;
+    padding: 1rem;
+    text-align: center;
+}
+
+#lastModified {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.weather-table,
+.data-table {
+    margin: 1em auto;
+    border-collapse: collapse;
+    width: auto;
+    max-width: 100%;
+    font-size: 1em;
+}
+
+.weather-table th,
+.weather-table td,
+.data-table th,
+.data-table td {
+    padding: 0.4em 0.7em 0.4em 0;
+    text-align: left;
+    border: none;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+.weather-table th,
+.data-table th {
+    font-weight: bold;
+    min-width: 110px;
+}

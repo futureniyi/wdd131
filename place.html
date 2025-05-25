@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria - Country Page</title>
+    <meta name="description" content="WDD 131 – W03 Assignment: Country Page by Olaniyi Bello. It uses CSS and Javascript.">
+    <meta name="author" content="Olaniyi Bello">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=PT+Serif:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+    <main>
+        <!-- Hero Image Section -->
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/nigeria-large.webp">
+                <source media="(min-width: 500px)" srcset="images/nigeria-medium.webp">
+                <img src="images/nigeria-small.webp" alt="Abeokuta, Nigeria" width="1500" height="750">
+            </picture>
+
+            <!-- Data Section -->
+            <!-- <div class="container" id="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 923,768 sq km</p>
+                <p><strong>Population:</strong> 223,800,000</p>
+                <p><strong>Capital:</strong> Abuja</p>
+                <p><strong>Languages:</strong> English (official)</p>
+                <p><strong>Currency:</strong> Nigerian Naira (₦)</p>
+                <p><strong>Time Zone:</strong> UTC+1</p>
+                <p><strong>Calling Code:</strong> +234</p>
+                <p><strong>Internet TLD:</strong> .ng</p>
+                    
+            </div> -->
+
+            <div class="container" id="data">
+                <h2>Data</h2>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Area:</th>
+                            <td>923,768 sq km</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Population:</th>
+                            <td>223,800,000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Capital:</th>
+                            <td>Abuja</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Languages:</th>
+                            <td>English (official)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Currency:</th>
+                            <td>Nigerian Naira (₦)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Time Zone:</th>
+                            <td>UTC+1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Calling Code:</th>
+                            <td>+234</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Internet TLD:</th>
+                            <td>.ng</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+              
+            
+            <!-- Weather Section -->
+            <div class="container" id="weather">
+                <h2>Weather</h2>
+                <!-- Small Weather Icon -->
+                <img src="images/cloudy-icon.svg" alt="Cloudy Icon" width="128">
+
+                <!-- <p><strong>Temperature:</strong> 29°C</p>
+                <p><strong>Condition:</strong> Cloudy</p>
+                <p><strong>Wind:</strong> 10 km/h</p>
+                <p><strong>Wind Chill:</strong> 27°C</p> -->
+                <table class="weather-table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Temperature:</th>
+                            <td>29°C</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Condition:</th>
+                            <td>Cloudy</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wind:</th>
+                            <td>10 km/h</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wind Chill:</th>
+                            <td><span id="windchill-value">N/A</span></td>
+                        </tr>
+                    </tbody>        
+                </table>
+                  
+                  
+                  
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Olaniyi Bello &ndash; Lagos, Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
