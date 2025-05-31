@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1d4d72;
+    --text-color: black;
+    --heading-color: #333333;
+    --border-color: #dddddd;
+    --background-color: #ddd;
+    --main-max-width: 960px;
+    --highlight-color: yellow;
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'PT Serif', serif;
+}
+
+ body {
+     font-family: var(--primary-font);
+     margin: 0 auto;
+     line-height: 1.6;
+ }
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    background-color: var(--primary-color);
+}
+
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
+    margin: 0 auto;
+    align-content: center;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: white;
+    background-color: black;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+h2 {
+    padding: 1rem;
+    font-size: 22px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+main {
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+}
+
+.figure-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+}
+
+/* figure img {
+    display: block;
+    height: auto;
+    border: 1px solid var(--border-color);
+    justify-self: center;
+} */
+
+figure img {
+    width: 100%;
+    /* makes the image fill the card width */
+    max-width: 300px;
+    /* or set a max width for consistency */
+    height: 180px;
+    /* or any fixed height you like */
+    object-fit: cover;
+    /* fills the box and crops if necessary */
+    border: 1px solid var(--border-color);
+    display: block;
+    margin: 0 auto;
+    background: #eee;
+    /* helps when image is loading */
+}
+
+figcaption {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+footer {
+    /* display: block; */
+    background: var(--primary-color);
+    color: #e5e5e5;
+    padding: 1rem;
+    text-align: center;
+}
+
+#lastModified {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+

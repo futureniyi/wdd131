@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Demonstration</title>
+    <meta name="description" content="WDD 131 – W04 Lazy Loading Learning Activity.">
+    <meta name="author" content="Olaniyi Bello">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Lazy Loading</h1>
+        <picture>
+            <img src="https://placehold.co/400x600?text=Hero+Image&font=Montserrat" loading="lazy" width="400">
+        </picture>
+        <picture>
+            <img src="https://placehold.co/400x700?text=Hero+Image&font=Montserrat" loading="lazy" width="400">
+        </picture>
+        <picture>
+            <img src="https://placehold.co/400x800?text=Hero+Image&font=Montserrat" loading="lazy" width="400">
+        </picture>
+        <picture>
+            <img src="https://placehold.co/400x900?text=Hero+Image&font=Montserrat" loading="lazy" width="400">
+        </picture>
+        <picture>
+            <img src="https://placehold.co/400x950?text=Hero+Image&font=Montserrat" loading="lazy" width="400">
+        </picture>
+        <picture>
+            <img src="https://placehold.co/400x1000?text=Hero+Image&font=Montserrat" loading="lazy" width="400">
+        </picture>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Olaniyi Bello &ndash; Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
