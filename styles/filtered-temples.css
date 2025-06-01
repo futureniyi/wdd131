@@ -16,11 +16,20 @@
     --secondary-font: 'PT Serif', serif;
 }
 
- body {
-     font-family: var(--primary-font);
-     margin: 0 auto;
-     line-height: 1.6;
- }
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: var(--primary-font);
+    line-height: 1.6;
+}
 
 header {
     display: grid;
@@ -91,7 +100,7 @@ nav {
 
 h2 {
     padding: 1rem;
-    font-size: 22px;
+    font-size: 1.8rem;
     text-align: center;
     color: var(--text-color);
 }
@@ -101,44 +110,52 @@ main {
     margin: 0 auto;
 }
 
+/* Figure as a card */
 .figure-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 0.5rem;
+    gap: 1rem;
     padding: 1rem;
 }
 
-/* figure img {
-    display: block;
-    height: auto;
-    border: 1px solid var(--border-color);
-    justify-self: center;
-} */
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px;
+    /* fixed card height */
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 0 2px 12px #0001;
+    background-color: #fff;
+}
+
+figure h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
 
 figure img {
     width: 100%;
-    /* makes the image fill the card width */
     max-width: 300px;
-    /* or set a max width for consistency */
     height: 180px;
-    /* or any fixed height you like */
     object-fit: cover;
-    /* fills the box and crops if necessary */
     border: 1px solid var(--border-color);
-    display: block;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     background: #eee;
-    /* helps when image is loading */
 }
 
+/* Caption block */
 figcaption {
-    font-size: 0.9rem;
+    flex-grow: 1;
+    max-height: 120px;
+    font-size: 0.8rem;
     text-align: center;
-    margin: 1rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
 }
 
 footer {
-    /* display: block; */
     background: var(--primary-color);
     color: #e5e5e5;
     padding: 1rem;

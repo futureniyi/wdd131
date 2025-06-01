@@ -128,13 +128,15 @@ function displayTemples(templesArray) {
         img.loading = "lazy"; // native lazy loading
 
         const caption = document.createElement('figcaption');
-        caption.innerHTML = `<strong>${temple.templeName}</strong><br>
-            Location: ${temple.location}<br>
-            Dedicated: ${temple.dedicated}<br>
-            Area: ${temple.area.toLocaleString()} sq ft`;
+        caption.innerHTML = `
+        <h3>${temple.templeName}</h3>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>`;
 
-        figure.appendChild(img);
         figure.appendChild(caption);
+        figure.appendChild(img);
+        
 
         figureGrid.appendChild(figure);
     });
