@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description"
+        content="W05 Assignment: Product Review Form by Olaniyi Bello, featuring a product review form.">
+    <meta name="author" content="Olaniyi Bello">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=PT+Serif:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html" class="wf1">
+
+            <label for="product">Product Name<span class="required">*</span> </label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ... &#9662</option>
+                <!-- Options dynamically populated by JS -->
+            </select>
+
+            <!-- <label>Overall Rating</label> -->
+             <div>Overall Rating<span class="required">*</span></div>
+            <div class="stars">
+                <input type="radio" id="onestar" name="stars" value="1" required>
+                <label for="onestar"></label>
+                <input type="radio" id="twostar" name="stars" value="2" required>
+                <label for="twostar"></label>
+                <input type="radio" id="threestar" name="stars" value="3" required>
+                <label for="threestar"></label>
+                <input type="radio" id="fourstar" name="stars" value="4" required>
+                <label for="fourstar"></label>
+                <input type="radio" id="fivestar" name="stars" value="5" required>
+                <label for="fivestar"></label>
+            </div>
+            
+
+            <label for="InstallationDate">Date of Installation<span class="required">*</span></label>
+            <input type="date" id="InstallationDate" name="InstallationDate" required>
+
+            <div>Which features did you find useful in the product? 
+            </br>(Check all that apply)</div>
+            <label><input type="checkbox" id="design" name="design" value="yes"> Design</label>
+            <label><input type="checkbox" id="durability" name="durability" value="yes"> Durability</label>
+            <label><input type="checkbox" id="ease" name="ease" value="yes"> Ease of Use</label>
+            <label><input type="checkbox" id="performance" name="performance" value="yes"> Performance</label>
+
+            <label for="writtenReview">Written Review (Optional)</label>
+            <textarea id="writtenReview" name="writtenReview" rows="6" cols="50"></textarea>
+
+            <label for="name">Your Name (Optional)</label>
+            <input type="text" id="name" name="name">
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Olaniyi Bello - Lagos, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
