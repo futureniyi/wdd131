@@ -81,7 +81,9 @@ form select {
 }
 
 form select:invalid {
-    color: #888;
+    /* color: #888; */
+    /* color: #222222; */
+    color: #555;
 }
 
 
