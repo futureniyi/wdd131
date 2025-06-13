@@ -1,0 +1,51 @@
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    background: #f8f8fd;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #312774;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+select {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    margin-top: 1.5rem;
+    background: linear-gradient(#483d8b, #312774);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #312774;
+}
+
+#test-count {
+    margin-top: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    color: #555;
+}

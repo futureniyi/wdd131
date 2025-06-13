@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Relationship Test - Demo</title>
+    <link rel="stylesheet" href="styles/relationship-test.css">
+    <script src="scripts/relationship-test.js" defer></script>
+</head>
+
+<body>
+    <h1>Demo: Relationship Test (JS Options, localStorage Count)</h1>
+    <form method="get" action="relationship-score.html" id="relationshipTestForm">
+        <div class="form-group">
+            <label for="q1">I enjoy spending time with my partner.</label>
+            <select id="q1" name="q1" required>
+                <option value="" disabled selected>Select an option</option>
+                <!-- JS will append Likert options -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q2">We trust each other.</label>
+            <select id="q2" name="q2" required>
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q3">We resolve conflicts in a healthy way.</label>
+            <select id="q3" name="q3" required>
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q4">I feel appreciated in this relationship.</label>
+            <select id="q4" name="q4" required>
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q5">We support each other's goals.</label>
+            <select id="q5" name="q5" required>
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q6">We communicate openly about our feelings.</label>
+            <select id="q6" name="q6" required>
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q7">We have fun together.</label>
+            <select id="q7" name="q7" required>
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+        <button type="submit">Check Our Score</button>
+    </form>
+    <div id="test-count"></div>
+</body>
+
+</html>

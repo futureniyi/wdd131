@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Relationship Score</title>
+    <link rel="stylesheet" href="styles/relationship-test.css">
+</head>
+
+<body>
+    <h1>Your Relationship Score</h1>
+    <div id="score-output"></div>
+    <div class="battery-bar-bg"
+        style="background:#eee; width:350px; height:36px; border-radius:18px; margin:2rem auto;">
+        <div id="battery-bar"
+            style="height:100%; width:0; background:#36ba6b; border-radius:18px 0 0 18px; transition:width 1s;"></div>
+    </div>
+    <div id="improve-msg" style="text-align:center; margin-top:1.2rem;"></div>
+    <div id="test-count"></div>
+    <script>
+        // Read from GET params (primary) or fallback to localStorage
+        function getQueryParams() {
+            const params = {};
+            location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, (str, key, value) => {
+                params[key] = decodeURIComponent(value);
+            });
+            return params;
+        }
+
+        const params = getQueryParams();
+        let total = 0, answered = 0;
+        for (let i = 1; i <= 7; i++) {
+            const val = parseInt(params['q' + i], 10);
+            if (!isNaN(val)) { total += val; answered++; }
+        }
+        let percent = 0;
+        if (answered === 7) {
+            percent = Math.round((total / 49) * 100);
+            localStorage.setItem("relationshipTestScore", percent); // Optional: store score
+        } else {
+            percent = parseInt(localStorage.getItem("relationshipTestScore") || 0, 10);
+        }
+
+        // Show score
+        document.getElementById("score-output").textContent =
+            (answered === 7)
+                ? `Your score: ${percent}%`
+                : `Incomplete submission. Please answer all questions.`;
+
+        // Update battery bar
+        const bar = document.getElementById("battery-bar");
+        bar.style.width = percent + "%";
+        if (percent < 40) bar.style.background = "#ce4760";
+        else if (percent < 60) bar.style.background = "#ffc107";
+        else bar.style.background = "#36ba6b";
+
+        // Show improvement message & suggest help link if < 75%
+        const improveMsg = document.getElementById("improve-msg");
+        if (answered === 7) {
+            if (percent < 40)
+                improveMsg.innerHTML = `Your relationship battery is low. <a href="improve.html">See ways to get help</a>.`;
+            else if (percent < 75)
+                improveMsg.innerHTML = `Your battery is moderate. <a href="improve.html">Learn how to improve together</a>.`;
+            else
+                improveMsg.textContent = "Excellent! Your relationship battery is strong.";
+        }
+
+        // Show localStorage count
+        const count = parseInt(localStorage.getItem("relationshipTestCount") || 0, 10);
+        document.getElementById("test-count").textContent =
+            `You have completed this test ${count} time${count === 1 ? "" : "s"}.`;
+    </script>
+</body>
+
+</html>
