@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (improveMsg) {
             if (answered === 7) {
                 if (percent < 40)
-                    improveMsg.innerHTML = `Your relationship battery is low. <a href="improve.html">See ways to get help</a>.`;
+                    improveMsg.innerHTML = "Your relationship battery is low.";
                 else if (percent < 75)
-                    improveMsg.innerHTML = `Your battery is moderate. <a href="improve.html">Learn how to improve together</a>.`;
+                    improveMsg.innerHTML = "Your relationship battery is moderate.";
                 else
                     improveMsg.textContent = "Excellent! Your relationship battery is strong.";
             } else {
