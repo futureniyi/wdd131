@@ -18,29 +18,6 @@ if (mainnav && hambutton) {
     });
 }
 
-// FAQ toggle
-document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const answer = this.nextElementSibling;
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-
-        // Close all open answers
-        document.querySelectorAll('.faq-answer.open').forEach(a => {
-            a.classList.remove('open');
-            a.previousElementSibling.setAttribute('aria-expanded', 'false');
-        });
-
-        // Toggle current
-        if (!expanded) {
-            this.setAttribute('aria-expanded', 'true');
-            answer.classList.add('open');
-        } else {
-            this.setAttribute('aria-expanded', 'false');
-            answer.classList.remove('open');
-        }
-    });
-});
-
 // Populating Team Members
 const teamMembers = [
     {

@@ -414,46 +414,6 @@ a:focus {
     outline: none; 
 }
 
-/* Section Default */
-
-/* Two Column Width Section */
-
-.two-column-width {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 3rem 1rem 3rem 1rem;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    background: #f8f8fd;
-}
-
-.two-column-width h3 {
-    font-family: var(--primary-font);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.two-column-width p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.two-column-width li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    list-style: none;
-}
-
-.left {
-    width: 100%;
-}
-
-.right {
-    width: 100%;
-}
-
 /* Social Media Section */
 .social-media {
     display: grid;
@@ -503,8 +463,6 @@ a:focus {
     color: var(--primary-color);
     font-weight: bold;
 }
-
-
 
 /* Footer */
 footer {
